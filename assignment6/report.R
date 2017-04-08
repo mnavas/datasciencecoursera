@@ -28,5 +28,22 @@ qplot(st$Summarized.Offense.Description[as.POSIXlt(st$Occurred.Date.or.Date.Rang
 
 sf$Date <- as.POSIXct(sf$Date, format = "%m/%d/%Y")
 sf_cat <- aggregate(sf$Date,by=list(sf$Date,sf$Category),FUN=length)
-ggplot(data=sf_cat,aes(x=Grop))
+
+library(ggplot2)
+ggplot(sf_cat[sf_cat$Group.2=="LARCENY/THEFT" | 
+                sf_cat$Group.2=="ASSAULT" | 
+                sf_cat$Group.2=="WARRANTS" | 
+                sf_cat$Group.2=="MISSING PERSON" | 
+                sf_cat$Group.2=="VEHICLE THEFT" | 
+                sf_cat$Group.2=="OTHER OFFENSES",], aes(x=Group.1, y=x, group=Group.2, colour=Group.2 ))+geom_line()+xlab("Date")+ylab("Number of Crimes")+ggtitle("Crimes in San Francisco")
+
+st$Date <- as.character(format(st$Occurred.Date.or.Date.Range.Start, format = "%m/%d/%Y"))
+st$Date <- as.POSIXct(st$Date, format = "%m/%d/%Y")
+st_cat <- aggregate(st$Date,by=list(st$Date,st$Summarized.Offense.Description),FUN=length)
+ggplot(st_cat[  st_cat$Group.2=="OTHER PROPERTY" | 
+                  st_cat$Group.2=="VEHICLE THEFT" | 
+                  st_cat$Group.2=="BURGLARY" | 
+                  st_cat$Group.2=="WARRANT ARREST" | 
+                  st_cat$Group.2=="CAR PROWL" | 
+                  st_cat$Group.2=="FRAUD",], aes(x=Group.1, y=x, group=Group.2, colour=Group.2 ))+geom_line()+xlab("Date")+ylab("Number of Crimes")+ggtitle("Crimes in San Seattle")
 
