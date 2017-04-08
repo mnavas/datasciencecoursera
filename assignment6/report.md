@@ -26,7 +26,7 @@ The most common crime of larceny/theft in San Francisco reached its pick during 
 
 ![crimesbytype_sf](/assignment6/crimesbytype_sf.jpeg)
 
-The crime of car prowl in Seattke reached two picks during June 25 and 4th of July for the summer of 2014
+The crime of car prowl in Seattle reached two picks during June 25 and 4th of July for the summer of 2014
 
 ![crimesbytype_st](/assignment6/crimesbytype_st.jpeg)
 
