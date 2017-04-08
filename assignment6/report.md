@@ -6,10 +6,14 @@ GitHub Documents
 
 This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
 
-![crimes_hour_sf](/crimes_hour_sf.jpeg)
-![crimes_hour_sf](/crimes_hour_st.jpeg)
+![crimes_hour_sf](/assignment6/crimes_hour_sf.jpeg)
+![crimes_hour_st](/assignment6/crimes_hour_st.jpeg)
 
+![crimes_19_sf](/assignment6/crimes_19_sf.jpeg)
+![crimes_19_st](/assignment6/crimes_19_st.jpeg)
 
+![crimesbytype_sf](/assignment6/crimesbytype_sf.jpeg)
+![crimesbytype_sf](/assignment6/crimesbytype_sf.jpeg)
 Including Code
 --------------
 
